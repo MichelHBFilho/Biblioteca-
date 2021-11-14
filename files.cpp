@@ -62,63 +62,55 @@ void saveAccountFile(std::vector<Account> accounts) {
 			file << i << " ";
 		}
 		file << std::endl;
-		file << ((account.permission()) ? "Manager" : "Client") << std::endl;
+		file << ((account.getPermission()) ? "Manager" : "Client") << std::endl;
 	}
 }
 
-//void saveBooksFile(std::vector<Book> books, std::map<Book, int> mapQuantity) {
-//	std::ofstream file;
-//	file.open("Books.txt");
-//
-//	if (!file.is_open()) {
-//		std::cout << "Não foi possivel abrir o banco" << std::endl;
-//		exit(404);
-//	}
-//
-//	file << books.size() << std::endl;
-//
-//	for (Book book : books) {
-//		file << book.bookName << std::endl;
-//		file << book.author << std::endl;
-//		file << book.publishDate << std::endl;
-//		file << mapQuantity[book] << std::endl;
-//	}
-//}
+void saveBookFile(std::vector<Book> books) {
+	std::ofstream file;
+	file.open("Books.txt");
 
-//std::pair<std::vector<Book>, std::map<Book, int>> readBooksFile() {
-//	std::ifstream file;
-//	file.open("Books.txt");
-//
-//	if (!file.is_open()) {
-//		std::cout << "Não foi possivel abrir o banco" << std::endl;
-//		exit(404);
-//	}
-//
-//	int numBooks;
-//	file >> numBooks;
-//
-//	std::vector<Book> books;
-//	std::map<Book, int> mapQuantity;
-//
-//	for (int i = 0; i < numBooks; i++) {
-//		std::string bookName;
-//		std::string author;
-//		std::string publishDate;
-//		int quantity;
-//
-//		file >> bookName;
-//		file >> author;
-//		file >> publishDate;
-//		file >> quantity;
-//
-//		Book book(bookName, author, publishDate);
-//
-//		books.push_back(book);
-//		mapQuantity[book] = quantity;
-//	}
-//
-//	std::pair<std::vector<Book>, std::map<Book, int>> map =
-//		std::make_pair(books, mapQuantity);
-//
-//	return map;
-//}
+	if (!file.is_open()) {
+		std::cout << "Não foi possivel abrir o banco" << std::endl;
+		exit(404);
+	}
+
+	file << books.size() << std::endl;
+
+	for (Book book : books) {
+		file << book.bookName << std::endl;
+		file << book.author << std::endl;
+		file << book.publishDate << std::endl;
+		file << book.quantity << std::endl;
+	}
+}
+
+std::vector<Book> readBookFile() {
+	std::ifstream file;
+	file.open("Books.txt");
+
+	if (!file.is_open()) {
+		std::cout << "Não foi possivel abrir o banco" << std::endl;
+		exit(404);
+	}
+
+	int numBooks;
+	file >> numBooks;
+	std::vector<Book> books;
+
+	for (int i = 0; i < numBooks; i++) {
+		std::string bookName;
+		std::string author;
+		std::string publishDate;
+		int quantity;
+
+		file >> bookName;
+		file >> author;
+		file >> publishDate;
+		file >> quantity;
+
+		books.push_back(Book(bookName, publishDate, author, quantity));
+	}
+
+	return books;
+}

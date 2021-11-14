@@ -5,20 +5,17 @@ class Account {
 private:
 	std::string name;
 	std::array<int, 32> password;
+protected:
+	bool permission;
 public:
-	virtual bool permission() {
-		return false;
-	}
 	Account(std::string name, std::array<int, 32> password);
 	std::string getName() const;
 	std::array<int, 32> getPassword() const;
+	bool getPermission() const;
 };
 
 class Manager : public Account {
 public:
-	bool permission() override {
-		return true;
-	}
 	Manager(std::string, std::array<int, 32>);
 };
 

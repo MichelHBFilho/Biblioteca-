@@ -6,6 +6,10 @@ Account::Account(std::string name, std::array<int, 32> password) :
 {
 }
 
+bool Account::getPermission() const {
+	return permission;
+}
+
 std::string Account::getName() const {
 	return name;
 }
@@ -15,7 +19,11 @@ std::array<int, 32> Account::getPassword() const {
 }
 
 Manager::Manager(std::string name, std::array<int, 32> password) :
-	Account(name, password) {}
+	Account(name, password) {
+	this->permission = true;
+}
 
 Client::Client(std::string name, std::array<int, 32> password) :
-	Account(name, password) {}
+	Account(name, password) {
+	this->permission = false;
+}

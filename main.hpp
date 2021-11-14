@@ -6,4 +6,4 @@ void sign_in();
 void initialScreen();
 void managerScreen(Account& account);
 void clientScreen(Account& account);
-//void registerBook();
+void registerBook();

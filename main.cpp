@@ -35,7 +35,7 @@ void loginPassword(Account& account) {
 	}
 
 	cout << "Entrou com sucesso" << endl;
-	if (account.permission()) {
+	if (account.getPermission()) {
 		managerScreen(account);
 	}
 	else {
@@ -125,7 +125,7 @@ void managerScreen(Account& account) {
 
 		switch (op) {
 		case 1:
-			/*registerBook();*/
+			registerBook();
 			break;
 		case 2:
 			break;
@@ -161,40 +161,28 @@ void clientScreen(Account& account) {
 	}	
 }
 
-//void registerBook() {
-//	clear();
-//	cout << "Nome do livro: ";
-//	string name;
-//	cin >> name;
-//
-//	cout << "Autor: ";
-//	string author;
-//	cin >> author;
-//
-//	cout << "Data de lançamento: ";
-//	string date;
-//	cin >> date;
-//
-//	cout << "Quantos livros tem em estoque?: ";
-//	int quantity;
-//	cin >> quantity;
-//
-//	auto books = readBooksFile();
-//	
-//	Book book(name, date, author);
-//	books.first.push_back(book);
-//	books.second[book] = quantity;
-//
-//	saveBooksFile(books.first, books.second);
-//
-//	cout << "Adicionar mais um livro? [S/n]: " << endl;
-//	char op;
-//	cin >> op;
-//
-//	if (op == 'S' || op == 's') {
-//		registerBook();
-//	}
-//}
+void registerBook() {
+	clear();
+	cout << "Nome do livro: ";
+	string name;
+	cin >> name;
+
+	cout << "Autor: ";
+	string author;
+	cin >> author;
+
+	cout << "Data de lançamento: ";
+	string date;
+	cin >> date;
+
+	cout << "Quantos livros tem em estoque?: ";
+	int quantity;
+	cin >> quantity;
+
+	std::vector<Book> books = readBookFile();
+	books.push_back(Book(name, date, author, quantity));
+	saveBookFile(books);
+}
 
 int main() {
 #ifdef WINDOWS 

@@ -7,5 +7,5 @@
 
 std::vector<Account> readAccountFile();
 void saveAccountFile(std::vector<Account> accounts);
-//std::pair<std::vector<Book>, std::map<Book, int>> readBooksFile();
-//void saveBooksFile(std::vector<Book> books, std::map<Book, int> mapQuantity);
+std::vector<Book> readBookFile();
+void saveBookFile(std::vector<Book> books);
