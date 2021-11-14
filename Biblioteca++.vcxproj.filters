@@ -13,5 +13,58 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Origem\src">
+      <UniqueIdentifier>{d81fb3d8-93bc-43a7-a03a-6a08ba018362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\tests">
+      <UniqueIdentifier>{bd3e4385-b0f7-485f-a758-78f2c68d354e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore">
+      <Filter>Arquivos de Recurso</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Arquivos de Recurso</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptography.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="files.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="main.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Book.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Account.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptography.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="files.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Accounts.txt">
+      <Filter>Arquivos de Recurso</Filter>
+    </Text>
+    <Text Include="Books.txt">
+      <Filter>Arquivos de Recurso</Filter>
+    </Text>
   </ItemGroup>
 </Project>
