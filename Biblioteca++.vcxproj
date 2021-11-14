@@ -146,15 +146,25 @@
   <ItemGroup>
     <ClInclude Include="Account.hpp" />
     <ClInclude Include="Book.hpp" />
+    <ClInclude Include="buy.hpp" />
     <ClInclude Include="cryptography.hpp" />
     <ClInclude Include="files.hpp" />
+    <ClInclude Include="log_in__sign_in.hpp" />
     <ClInclude Include="main.hpp" />
+    <ClInclude Include="registerBook.hpp" />
+    <ClInclude Include="screens.hpp" />
+    <ClInclude Include="seeStock.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="buy.cpp" />
     <ClCompile Include="cryptography.cpp" />
     <ClCompile Include="files.cpp" />
+    <ClCompile Include="log_in__sign_in.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="registerBook.cpp" />
+    <ClCompile Include="screens.cpp" />
+    <ClCompile Include="seeStock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Accounts.txt" />

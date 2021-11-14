@@ -16,9 +16,6 @@
     <Filter Include="Arquivos de Origem\src">
       <UniqueIdentifier>{d81fb3d8-93bc-43a7-a03a-6a08ba018362}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Arquivos de Origem\tests">
-      <UniqueIdentifier>{bd3e4385-b0f7-485f-a758-78f2c68d354e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore">
@@ -44,6 +41,21 @@
     <ClInclude Include="Book.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="screens.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="log_in__sign_in.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="registerBook.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="seeStock.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="buy.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp">
@@ -56,6 +68,21 @@
       <Filter>Arquivos de Origem\src</Filter>
     </ClCompile>
     <ClCompile Include="files.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="screens.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="log_in__sign_in.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="registerBook.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="seeStock.cpp">
+      <Filter>Arquivos de Origem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="buy.cpp">
       <Filter>Arquivos de Origem\src</Filter>
     </ClCompile>
   </ItemGroup>
